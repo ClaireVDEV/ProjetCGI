@@ -1,6 +1,7 @@
 import * as BABYLON from "babylonjs";
 import firstscene from "./scenes/firstscene.js";
 import secondscene from "./scenes/secondscene.js";
+import testscene from "./scenes/testscene.js";
 
 const canvas = document.getElementById("renderCanvas");
 const engine = new BABYLON.Engine(canvas, true);
@@ -22,6 +23,8 @@ async function startGame() {
             await changeScene(firstscene); // Change vers la première scène
         } else if (event.key === "2") {
             await changeScene(secondscene); // Change vers la seconde scène
+        } else if (event.key === "3") {
+            await changeScene(testscene);
         }
     });
 
